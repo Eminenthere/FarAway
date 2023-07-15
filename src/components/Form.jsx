@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Form = () => {
+const Form = ({ addToItem }) => {
   const [description, setDescription] = useState('')
   const [quantity, setQuantity] = useState(1)
 
@@ -13,6 +13,7 @@ const Form = () => {
     console.log(newItem)
     setDescription('')
     setQuantity(1)
+    addToItem(newItem)
   }
 
   return (
